@@ -31,15 +31,15 @@ Read on for additional information about the template's architecture and feature
 
 ## Architecture
 
-### Back end
+### Backend
 
-The entry point of the Sanic application is in _application.py_. There, the Sanic instance is initiated and configured to serve routes and static assets.
+The entry point of the Sanic application is in _application.py_. The Sanic instance is initiated there and configured to serve routes and static assets.
 
 Routes are defined using a Sanic blueprint in _beluga/routes.py_. The index route (`/`) is configured to return a simple HTML file that renders a React app.
 
-### Front end
+### Frontend
 
-The front end is served via Sanic's support for static directories. A bundle of assets prepared by webpack are stored in the `dist/` directory and exposed by the Sanic application.
+The front end is served via Sanic's support for static directories. A bundle of assets prepared by [webpack](https://webpack.js.org/) are stored in the `dist/` directory and exposed by the Sanic application.
 
 The React application defined in _App.jsx_ is compiled by webpack into a _bundle.js_ script which attaches children to the `root` element in _index.html_. When a user visits the `/` route, they will see the React application rendered within the `root` element of the _index_ page.
 
