@@ -1,0 +1,17 @@
+networks:
+  default:
+    external:
+      name: beluga
+services:
+  beluga:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: beluga
+    image: beluga
+    ports:
+    - 8020:8020
+    tty: true
+    volumes:
+    - .:/app
+version: '2'
