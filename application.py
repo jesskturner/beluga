@@ -7,6 +7,7 @@ from settings import WEB_PORT
 
 app = Sanic(__name__)
 app.blueprint(base_routes)
+app.static('/', 'dist')
 
 
 if __name__ == '__main__':
