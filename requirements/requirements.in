@@ -1,4 +1,5 @@
 flake8
 pytest-sanic
+pyyaml>=4.2b1
 sanic
 sanic-admin

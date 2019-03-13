@@ -71,7 +71,7 @@ make destroy
 ```
 Kills and removes the Docker container.
 
-### Package Management
+### Dependency Management
 
 ```bash
 make pip_compile
